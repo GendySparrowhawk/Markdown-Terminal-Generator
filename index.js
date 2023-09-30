@@ -31,10 +31,29 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'enter your license',
-        choices: ['MIT', 'ISC', 'AFL-3', 'Apache-2', '0BSD', 'CC', 'GPL', 'LGPL', 'Zlib','Unlicense'],
+        choices: ['MIT', 'ISC', 'Apachev2', 'OBSD', 'CC', 'GPLv3', 'IBM', 'Zlib','Unlicense', ''],
         filter(obj) {
             return obj
         }
+    },
+    {
+        type: 'checkbox',
+        name: 'tools',
+        message: 'select all that apply',
+        choices: [
+            'HTML',
+            'CSharp',
+            'Python',
+            'CSS',
+            'javaScript',
+            'nodeJS',
+            'REACT',
+            'Angular',
+            'Bootstrap',
+            'Tailwind',
+            'jquerry',
+            'MySQL',
+        ]
     },
     {
         type: 'input',
@@ -48,11 +67,11 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
 
 
 // TODO: Create a function to initialize app
 function init() { 
+    // TODO: Create a function to write README file
     return inquirer.prompt(questions)
     .then((data) => { 
        const markDown =  generateMarkdown(data);
