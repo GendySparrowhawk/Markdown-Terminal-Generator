@@ -1,10 +1,10 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
 const generateMarkdown = require('./utils/generateMarkdown')
 const inquirer = require('inquirer')
   
 const fs = require('fs');
 
-// TODO: Create an array of questions for user input
+//Create an array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -32,9 +32,6 @@ const questions = [
         name: 'license',
         message: 'enter your license',
         choices: ['MIT', 'ISC', 'Apachev2', 'OBSD', 'CC', 'GPLv3', 'IBM', 'Zlib','Unlicense', ''],
-        filter(obj) {
-            return obj
-        }
     },
     {
         type: 'checkbox',
@@ -59,6 +56,11 @@ const questions = [
         type: 'input',
         name: 'tests',
         message: 'What tests have you run?',
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Please enter your github url',
     },
     {
         type: 'input',

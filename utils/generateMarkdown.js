@@ -70,6 +70,7 @@ function generateMarkdown(data) {
   const toolSet = generateTools(data.tools);
   return `
 # ${data.title}
+${renderLicenseBadge(data.license)}
 ## Description
 ### ${data.description}
 ## Table of Contense
@@ -94,7 +95,8 @@ ${toolSet}
  ${data.tests}
 ## Questions
 ### Have questions? Reach me here:
-${data.email}
+My gitHub: ${data.github}
+- ${data.email}
 `;
 };
 
